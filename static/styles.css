@@ -1,47 +1,13 @@
-/* Стили для главного представителя */
-.main-representative {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.main-photo {
-    width: 200px; /* Размер фотографии */
-    height: 200px;
-    border-radius: 50%; /* Закругленная фотография */
-    object-fit: cover; /* Сохраняет пропорции изображения */
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.main-photo:hover {
-    transform: scale(1.05);
-}
-
-.main-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.main-info .description {
-    font-size: 16px;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Остальные стили (оставь их без изменений) */
+/* Контейнер для фотографий */
 .contacts-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Перенос на новую строку, если не хватает места */
+    justify-content: center; /* Центрирование элементов */
+    gap: 20px; /* Отступы между элементами */
     padding: 20px;
 }
 
+/* Стили для каждого элемента контакта */
 .contact-item {
     display: flex;
     flex-direction: column;
@@ -51,26 +17,15 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 300px; /* Фиксированная ширина для каждого элемента */
 }
 
-.contact-item.center {
-    order: 2;
-}
-
-.contact-item.left {
-    order: 1;
-}
-
-.contact-item.right {
-    order: 3;
-}
-
+/* Стили для фотографий */
 .contact-photo {
-    width: 150px;
+    width: 150px; /* Размер фотографий */
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%; /* Закругленные фотографии */
+    object-fit: cover; /* Сохраняет пропорции изображения */
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
@@ -79,6 +34,7 @@
     transform: scale(1.05);
 }
 
+/* Стили для текста */
 .contact-info h2 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -101,14 +57,15 @@
     margin: 8px 0;
 }
 
+/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .contacts-container {
-        flex-direction: column;
+        flex-direction: column; /* Вертикальное расположение на мобильных */
         align-items: center;
     }
 
     .contact-item {
-        width: 90%;
+        width: 90%; /* Ширина элементов на мобильных */
     }
 
     .contact-photo {
