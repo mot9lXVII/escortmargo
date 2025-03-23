@@ -42,16 +42,15 @@
 
         <!-- Выбор темы -->
         <div class="theme-selector">
-            <span>Изменение темы:</span>
-            <div class="theme-switch">
-                <input type="radio" id="light-theme" name="theme" value="light" checked>
-                <label for="light-theme">Светлая</label>
-                <input type="radio" id="dark-theme" name="theme" value="dark">
-                <label for="dark-theme">Темная</label>
-            </div>
-        </div>
+    <span>Изменение темы:</span>
+    <div class="theme-switch">
+        <input type="radio" id="light-theme" name="theme" value="light">
+        <label for="light-theme">Светлая</label>
+        <input type="radio" id="dark-theme" name="theme" value="dark">
+        <label for="dark-theme">Темная</label>
     </div>
-
+</div>
+        
     <!-- Подключение JavaScript -->
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
     <script>
