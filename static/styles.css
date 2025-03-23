@@ -22,9 +22,10 @@
 
 /* Стили для фотографий */
 .contact-photo {
-    width: 150px; /* Уменьшенный размер фотографий */
+    width: 150px; /* Размер фотографий */
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50%; /* Закругленные фотографии */
+    object-fit: cover; /* Сохраняет пропорции изображения */
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
@@ -37,6 +38,12 @@
 .contact-info h2 {
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 .price-list {
@@ -68,6 +75,10 @@
 
     .contact-info h2 {
         font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
     }
 
     .price-list {
