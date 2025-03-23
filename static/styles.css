@@ -1,0 +1,151 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* Основной шрифт */
+    background-color: #f9f9f9; /* Светлый фон */
+    display: flex;
+    min-height: 100vh;
+    color: #333; /* Основной цвет текста */
+}
+
+/* Боковое меню */
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif; /* Шрифт для меню */
+}
+
+.sidebar ul li a:hover {
+    color: #f39c12;
+}
+
+/* Активный пункт меню */
+.sidebar ul li a.active {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Основной контент */
+.content {
+    flex: 1;
+    padding: 40px;
+    margin-left: 240px;
+    text-align: center;
+    max-width: 800px; /* Ограничение ширины контента */
+    margin: 0 auto; /* Центрирование контента */
+    padding-left: 260px; /* Отступ для бокового меню */
+}
+
+/* Заголовки */
+h1, h2 {
+    font-family: 'Roboto', sans-serif; /* Шрифт для заголовков */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Подзаголовки */
+.subtitle {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Стили для фотографии */
+.contact-photo {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.contact-photo:hover {
+    transform: scale(1.05); /* Увеличение фотографии при наведении */
+}
+
+/* Стили для текста под фото */
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.price-list li {
+    margin: 10px 0;
+}
+
+.price-list li strong {
+    color: #f39c12; /* Желтый цвет для выделения */
+    font-weight: 600;
+}
+
+/* Улучшенные тени и отступы */
+.content {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+/* Анимация для плавного появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 0.5s ease-in-out;
+}

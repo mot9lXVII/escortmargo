@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - 3ск0рт услуги Ив4ц3Buч</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Боковое меню -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about">О нас</a></li>
+            <li><a href="/services" class="active">Услуги</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/developers">Разработчики</a></li>  <!-- Новая кнопка -->
+        </ul>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <h1>Наши услуги</h1>
+        <p class="subtitle">
+            Мы предоставляем широкий спектр услуг для вашего комфорта и безопасности.
+            Вот что мы можем предложить:
+        </p>
+        <ul class="services-list">
+            <li>Экстренный выезд по вашему сигналу.</li>
+            <li>Транспортировка в наш отель.</li>
+            <li>Комфортное размещение и полная конфиденциальность.</li>
+            <li>Круглосуточная поддержка.</li>
+        </ul>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
