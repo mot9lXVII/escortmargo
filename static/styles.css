@@ -1,8 +1,8 @@
-/* Контейнер для горизонтального расположения */
+/* Контейнер для центрирования и горизонтального расположения */
 .contacts-container {
     display: flex;
     flex-wrap: wrap; /* Перенос на новую строку, если не хватает места */
-    justify-content: space-around; /* Равномерное распределение элементов */
+    justify-content: center; /* Центрирование элементов */
     gap: 20px; /* Отступы между элементами */
     padding: 20px;
 }
@@ -20,13 +20,23 @@
     width: 300px; /* Фиксированная ширина для каждого элемента */
 }
 
+/* Обертка для фотографии */
+.photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Размер обертки */
+    height: 150px;
+    border-radius: 50%; /* Закругленная обертка */
+    overflow: hidden; /* Обрезаем изображение по кругу */
+    margin-bottom: 15px;
+}
+
 /* Стили для фотографий */
 .contact-photo {
-    width: 150px; /* Размер фотографий */
-    height: 150px;
-    border-radius: 50%; /* Закругленные фотографии */
+    width: 100%; /* Заполняет обертку */
+    height: 100%;
     object-fit: cover; /* Сохраняет пропорции изображения */
-    margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
@@ -68,7 +78,7 @@
         width: 90%; /* Ширина элементов на мобильных */
     }
 
-    .contact-photo {
+    .photo-wrapper {
         width: 120px;
         height: 120px;
     }
