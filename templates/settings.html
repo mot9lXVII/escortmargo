@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки - 3ск0рт услуги Ив4ц3Buч</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Кнопка для открытия меню -->
+    <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Боковое меню -->
+    <nav class="sidebar" id="sidebar">
+        <!-- Кнопка для закрытия меню -->
+        <div class="close-menu" id="close-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about">О нас</a></li>
+            <li><a href="/services">Услуги</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/developers">Разработчики</a></li>
+            <li><a href="/settings" class="active">Настройки</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <h1>Настройки</h1>
+        <p class="subtitle">
+            Здесь вы можете настроить параметры сайта.
+        </p>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
