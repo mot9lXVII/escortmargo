@@ -19,3 +19,15 @@ document.addEventListener('click', (event) => {
         sidebar.classList.remove('active');
     }
 });
+
+// Обработка изменения темы
+const themeSwitcher = document.querySelector('.theme-switch');
+const body = document.body;
+
+themeSwitcher.addEventListener('change', (event) => {
+    if (event.target.value === 'dark') {
+        body.classList.add('dark-theme');
+    } else {
+        body.classList.remove('dark-theme');
+    }
+});
