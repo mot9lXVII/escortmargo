@@ -1,9 +1,11 @@
 <div class="content">
-    <!-- Контейнер для горизонтального расположения -->
+    <!-- Контейнер для центрирования и горизонтального расположения -->
     <div class="contacts-container">
         <!-- Первая фотография -->
         <div class="contact-item">
-            <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+            <div class="photo-wrapper">
+                <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+            </div>
             <div class="contact-info">
                 <h2>Марго Сладка</h2>
                 <p class="description">
@@ -20,7 +22,9 @@
 
         <!-- Вторая фотография -->
         <div class="contact-item">
-            <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
+            <div class="photo-wrapper">
+                <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
+            </div>
             <div class="contact-info">
                 <h2>Потаскуха Ржавого</h2>
                 <p class="description">
@@ -37,7 +41,9 @@
 
         <!-- Третья фотография -->
         <div class="contact-item">
-            <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
+            <div class="photo-wrapper">
+                <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
+            </div>
             <div class="contact-info">
                 <h2>Игорёк Геркулес</h2>
                 <p class="description">
