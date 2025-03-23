@@ -10,7 +10,7 @@ body {
     overflow-x: hidden; /* Скрываем горизонтальный скролл */
 }
 
-/* Кнопка для открытия/закрытия меню */
+/* Кнопка для открытия меню */
 .menu-toggle {
     position: fixed;
     top: 20px;
@@ -27,18 +27,6 @@ body {
     height: 3px;
     background-color: #333;
     transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.menu-toggle.close .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.close .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.close .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Боковое меню */
@@ -60,10 +48,40 @@ body {
     left: 0; /* Меню видно */
 }
 
+/* Кнопка для закрытия меню */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+}
+
+.close-menu .bar:first-child {
+    transform: rotate(45deg);
+}
+
+.close-menu .bar:last-child {
+    transform: rotate(-45deg);
+}
+
+/* Список меню */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 50px; /* Отступ для кнопки закрытия */
+    margin-top: 60px; /* Отступ для кнопки закрытия */
 }
 
 .sidebar ul li {
