@@ -31,56 +31,62 @@
             <li><a href="/developers">Разработчики</a></li>
         </ul>
     </nav>
+
+    <!-- Основной контент -->
     <div class="content">
+        <!-- Первая фотография -->
+        <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
         
-    <!-- Первая фотография -->
-    <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
-    
-    <!-- Надпись под первой фотографией -->
-    <div class="contact-info">
-        <h2>Марго Сладка</h2>
-        <ul class="price-list">
-            <li>Футджоб - 3000 филякоинов</li>
-            <li>Выезд на дом - 4500 филякоинов</li>
-            <li>Все включено - 9000 филякоинов</li>
-            <li>С окончанием - 1500 филякоинов</li>
-        </ul>
+        <!-- Надпись под первой фотографией -->
+        <div class="contact-info">
+            <h2>Марго Сладка</h2>
+            <ul class="price-list">
+                <li>Футджоб - 3000 филякоинов</li>
+                <li>Выезд на дом - 4500 филякоинов</li>
+                <li>Все включено - 9000 филякоинов</li>
+                <li>С окончанием - 1500 филякоинов</li>
+            </ul>
+        </div>
+
+        <!-- Вторая фотография -->
+        <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
+        
+        <!-- Надпись под второй фотографией -->
+        <div class="contact-info">
+            <h2>Потаскуха Ржавого</h2>
+            <ul class="price-list">
+                <li>Футджоб - 15000 филякоинов</li>
+                <li>Выезд на дом - 7000 филякоинов</li>
+                <li>Все включено - 12000 филякоинов</li>
+                <li>С окончанием - 3000 филякоинов</li>
+            </ul>
+        </div>
+
+        <!-- Третья фотография -->
+        <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
+        
+        <!-- Надпись под третьей фотографией -->
+        <div class="contact-info">
+            <h2>Игорёк Геркулес</h2>
+            <p class="subtitle">
+                Наш главный и самый лучший сутенер города!
+            </p>
+        </div>
+
+        <!-- Новая фотография (photo4.jpg) -->
+        <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Владелец компании" class="contact-photo">
+        
+        <!-- Надпись под новой фотографией -->
+        <div class="contact-info">
+            <h2>Владелец компании</h2>
+            <p class="subtitle">
+                Основатель и владелец компании <strong>3ск0рт услуги Ив4ц3Buч</strong>. 
+                Отвечает за стратегическое развитие и качество услуг.
+            </p>
+        </div>
     </div>
 
-    <!-- Вторая фотография -->
-    <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
-    
-    <!-- Надпись под второй фотографией -->
-    <div class="contact-info">
-        <h2>Потаскуха Ржавого</h2>
-        <ul class="price-list">
-            <li>Футджоб - 15000 филякоинов</li>
-            <li>Выезд на дом - 7000 филякоинов</li>
-            <li>Все включено - 12000 филякоинов</li>
-            <li>С окончанием - 3000 филякоинов</li>
-        </ul>
-    </div>
-
-    <!-- Третья фотография -->
-    <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
-    
-    <!-- Надпись под третьей фотографией -->
-    <div class="contact-info">
-        <h2>Игорёк Геркулес</h2>
-        <p class="subtitle">
-            Наш главный и самый лучший сутенер города!
-        </p>
-    </div>
-
-    <!-- Новая фотография (photo4.jpg) -->
-    <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Владелец компании" class="contact-photo">
-    
-    <!-- Надпись под новой фотографией -->
-    <div class="contact-info">
-        <h2>Владелец компании</h2>
-        <p class="subtitle">
-            Основатель и владелец компании <strong>3ск0рт услуги Ив4ц3Buч</strong>. 
-            Отвечает за стратегическое развитие и качество услуг.
-        </p>
-    </div>
-</div>
+    <!-- Подключение JavaScript -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
