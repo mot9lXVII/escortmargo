@@ -156,3 +156,64 @@ body {
     color: #f39c12;
     font-weight: 600;
 }
+
+/* Стили для страницы разработчиков */
+.developers-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.developers-list {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.developers-list li {
+    margin: 10px 0;
+}
+
+.developer-name {
+    color: yellow;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 90%;
+    }
+
+    .contact-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-info h2 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .price-list {
+        font-size: 14px;
+    }
+
+    .developers-title {
+        font-size: 24px;
+    }
+
+    .developers-list {
+        font-size: 16px;
+    }
+}
