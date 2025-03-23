@@ -1,122 +1,32 @@
-/* Общие стили */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f9f9f9;
+/* Контейнер для горизонтального расположения */
+.contacts-container {
     display: flex;
-    min-height: 100vh;
-    color: #333;
-    overflow-x: hidden;
-}
-
-/* Кнопка для открытия меню */
-.menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Боковое меню */
-.sidebar {
-    width: 200px;
-    background-color: #333;
-    color: white;
+    flex-wrap: wrap; /* Перенос на новую строку, если не хватает места */
+    justify-content: space-around; /* Равномерное распределение элементов */
+    gap: 20px; /* Отступы между элементами */
     padding: 20px;
-    height: 100vh;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: -250px;
-    transition: left 0.3s ease;
-    z-index: 999;
 }
 
-.sidebar.active {
-    left: 0;
-}
-
-/* Кнопка для закрытия меню */
-.close-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
+/* Стили для каждого элемента контакта */
+.contact-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.close-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-}
-
-.close-menu .bar:first-child {
-    transform: rotate(45deg);
-}
-
-.close-menu .bar:last-child {
-    transform: rotate(-45deg);
-}
-
-/* Список меню */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 60px;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    color: #f39c12;
-}
-
-/* Основной контент */
-.content {
-    flex: 1;
-    padding: 40px;
-    margin-left: 0;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 80px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Фиксированная ширина для каждого элемента */
 }
 
-/* Стили для фотографии */
+/* Стили для фотографий */
 .contact-photo {
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    width: 150px; /* Уменьшенный размер фотографий */
+    height: 150px;
+    border-radius: 50%; /* Закругленные фотографии */
+    object-fit: cover; /* Сохраняет пропорции изображения */
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
@@ -124,30 +34,54 @@ body {
     transform: scale(1.05);
 }
 
-/* Стили для текста под фото */
-.contact-info {
-    text-align: center;
-    margin-bottom: 40px;
+/* Стили для текста */
+.contact-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.contact-info h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+.description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 .price-list {
     list-style-type: none;
     padding: 0;
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
 }
 
 .price-list li {
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
-.price-list li strong {
-    color: #f39c12;
-    font-weight: 600;
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column; /* Вертикальное расположение на мобильных */
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 90%; /* Ширина элементов на мобильных */
+    }
+
+    .contact-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-info h2 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .price-list {
+        font-size: 14px;
+    }
 }
