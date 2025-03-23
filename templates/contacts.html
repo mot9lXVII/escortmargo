@@ -1,80 +1,61 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - 3ск0рт услуги Ив4ц3Buч</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Кнопка для открытия меню -->
-    <div class="menu-toggle" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-
-    <!-- Боковое меню -->
-    <nav class="sidebar" id="sidebar">
-        <!-- Кнопка для закрытия меню -->
-        <div class="close-menu" id="close-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-
-        <ul>
-            <li><a href="/">Главная</a></li>
-            <li><a href="/about">О нас</a></li>
-            <li><a href="/services">Услуги</a></li>
-            <li><a href="/contacts" class="active">Контакты</a></li>
-            <li><a href="/developers">Разработчики</a></li>
-        </ul>
-    </nav>
-
-    <!-- Основной контент -->
-    <div class="content">
-        <!-- Первая фотография -->
-        <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
-        
-        <!-- Надпись под первой фотографией -->
-        <div class="contact-info">
-            <h2>Марго Сладка</h2>
-            <ul class="price-list">
-                <li>Футджоб - 3000 филякоинов</li>
-                <li>Выезд на дом - 4500 филякоинов</li>
-                <li>Все включено - 9000 филякоинов</li>
-                <li>С окончанием - 1500 филякоинов</li>
-            </ul>
-        </div>
-
-        <!-- Вторая фотография -->
-        <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
-        
-        <!-- Надпись под второй фотографией -->
-        <div class="contact-info">
-            <h2>Потаскуха Ржавого</h2>
-            <ul class="price-list">
-                <li>Футджоб - 15000 филякоинов</li>
-                <li>Выезд на дом - 7000 филякоинов</li>
-                <li>Все включено - 12000 филякоинов</li>
-                <li>С окончанием - 3000 филякоинов</li>
-            </ul>
-        </div>
-
-        <!-- Третья фотография -->
-        <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
-        
-        <!-- Надпись под третьей фотографией -->
-        <div class="contact-info">
-            <h2>Игорёк Геркулес</h2>
-            <p class="subtitle">
-                Наш главный и самый лучший сутенер города!
+<div class="content">
+    <!-- Главный представитель компании -->
+    <div class="main-representative">
+        <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Главный представитель" class="main-photo">
+        <div class="main-info">
+            <h2>Главный представитель компании</h2>
+            <p class="description">
+                Он — лицо нашей компании, которая предоставляет эскортные услуги по всему городу. 
+                Именно он отвечает за качество и безопасность наших клиентов.
             </p>
         </div>
     </div>
 
-    <!-- Подключение JavaScript -->
-    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
-</body>
-</html>
+    <!-- Контейнер для фотографий -->
+    <div class="contacts-container">
+        <!-- Третья фотография (слева) -->
+        <div class="contact-item left">
+            <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
+            <div class="contact-info">
+                <h2>Игорёк Геркулес</h2>
+                <p class="description">
+                    Наш главный сутенер. Организует встречи на высшем уровне и обеспечивает безопасность.
+                </p>
+            </div>
+        </div>
+
+        <!-- Вторая фотография (центр) -->
+        <div class="contact-item center">
+            <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
+            <div class="contact-info">
+                <h2>Потаскуха Ржавого</h2>
+                <p class="description">
+                    Эксперт в области экзотических услуг. Гарантирует полную конфиденциальность и комфорт.
+                </p>
+                <ul class="price-list">
+                    <li>Футджоб - 15000 филякоинов</li>
+                    <li>Выезд на дом - 7000 филякоинов</li>
+                    <li>Все включено - 12000 филякоинов</li>
+                    <li>С окончанием - 3000 филякоинов</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Первая фотография (справа) -->
+        <div class="contact-item right">
+            <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+            <div class="contact-info">
+                <h2>Марго Сладка</h2>
+                <p class="description">
+                    Профессиональный эскорт с 10-летним опытом. Всегда готова сделать ваш вечер незабываемым.
+                </p>
+                <ul class="price-list">
+                    <li>Футджоб - 3000 филякоинов</li>
+                    <li>Выезд на дом - 4500 филякоинов</li>
+                    <li>Все включено - 9000 филякоинов</li>
+                    <li>С окончанием - 1500 филякоинов</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
