@@ -1,5 +1,3 @@
-// scripts.js
-
 // Получаем элементы
 const menuToggle = document.getElementById('menu-toggle');
 const closeMenu = document.getElementById('close-menu');
