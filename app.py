@@ -18,7 +18,7 @@ def services():
 def contacts():
     return render_template('contacts.html')
 
-@app.route('/developers')  # Новый маршрут для страницы "Разработчики"
+@app.route('/developers')
 def developers():
     return render_template('developers.html')
 
