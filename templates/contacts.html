@@ -8,8 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Кнопка для открытия меню -->
+    <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
     <!-- Боковое меню -->
-    <nav class="sidebar">
+    <nav class="sidebar" id="sidebar">
+        <!-- Кнопка для закрытия меню -->
+        <div class="close-menu" id="close-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
         <ul>
             <li><a href="/">Главная</a></li>
             <li><a href="/about">О нас</a></li>
@@ -21,44 +34,15 @@
 
     <!-- Основной контент -->
     <div class="content">
-        <!-- Первая фотография -->
-        <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
-
-        <!-- Надпись под первой фотографией -->
-        <div class="contact-info">
-            <h2>Марго Сладка</h2>
-            <ul class="price-list">
-                <li>Футджоб - 3000 филякоинов</li>
-                <li>Выезд на дом - 4500 филякоинов</li>
-                <li>Все включено - 9000 филякоинов</li>
-                <li>С окончанием - 1500 филякоинов</li>
-            </ul>
-        </div>
-
-        <!-- Вторая фотография -->
-        <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
-
-        <!-- Надпись под второй фотографией -->
-        <div class="contact-info">
-            <h2>Потаскуха Ржавого</h2>
-            <ul class="price-list">
-                <li>Футджоб - 15000 филякоинов</li>
-                <li>Выезд на дом - 7000 филякоинов</li>
-                <li>Все включено - 12000 филякоинов</li>
-                <li>С окончанием - 3000 филякоинов</li>
-            </ul>
-        </div>
-
-        <!-- Третья фотография -->
-        <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
-
-        <!-- Надпись под третьей фотографией -->
-        <div class="contact-info">
-            <h2>Игорёк Геркулес</h2>
-            <p class="subtitle">
-                Наш главный и самый лучший сутенер города!
-            </p>
-        </div>
+        <h1>Контакты</h1>
+        <p class="subtitle">
+            Свяжитесь с нами, чтобы узнать больше о наших услугах или оставить отзыв.
+        </p>
+        <ul class="contacts-list">
+            <li><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</li>
+            <li><strong>Email:</strong> info@iv4c3bu4.ru</li>
+            <li><strong>Адрес:</strong> г. Москва, ул. Пушкина, д. Колотушкина</li>
+        </ul>
     </div>
 
     <!-- Подключение JavaScript -->
