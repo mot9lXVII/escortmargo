@@ -180,6 +180,80 @@ body {
     margin-right: 10px; /* Отступ справа */
 }
 
+/* Стили для выбора темы */
+.theme-selector {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.theme-selector span {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switch input[type="radio"] {
+    display: none;
+}
+
+.theme-switch label {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switch label:hover {
+    background-color: #ddd;
+}
+
+.theme-switch input[type="radio"]:checked + label {
+    background-color: #333;
+    color: white;
+}
+
+/* Темная тема */
+.dark-theme {
+    background-color: #0d1117; /* Цвет фона как у GitHub */
+    color: white;
+}
+
+.dark-theme .sidebar {
+    background-color: #161b22; /* Темный цвет для бокового меню */
+}
+
+.dark-theme .sidebar ul li a {
+    color: white;
+}
+
+.dark-theme .sidebar ul li a:hover {
+    color: #f39c12;
+}
+
+.dark-theme .content {
+    color: white;
+}
+
+.dark-theme .theme-switch label {
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme .theme-switch label:hover {
+    background-color: #444;
+}
+
+.dark-theme .theme-switch input[type="radio"]:checked + label {
+    background-color: #555;
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .contacts-container {
