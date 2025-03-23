@@ -1,31 +1,37 @@
 <div class="content">
-    <!-- Главный представитель компании -->
-    <div class="main-representative">
-        <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Главный представитель" class="main-photo">
-        <div class="main-info">
-            <h2>Главный представитель компании</h2>
-            <p class="description">
-                Он — лицо нашей компании, которая предоставляет эскортные услуги по всему городу. 
-                Именно он отвечает за качество и безопасность наших клиентов.
-            </p>
-        </div>
-    </div>
-
     <!-- Контейнер для фотографий -->
     <div class="contacts-container">
-        <!-- Третья фотография (слева) -->
-        <div class="contact-item left">
-            <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
+        <!-- Новая фотография (photo4.jpg) -->
+        <div class="contact-item">
+            <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Главный представитель" class="contact-photo">
             <div class="contact-info">
-                <h2>Игорёк Геркулес</h2>
+                <h2>Главный представитель</h2>
                 <p class="description">
-                    Наш главный сутенер. Организует встречи на высшем уровне и обеспечивает безопасность.
+                    Он — лицо нашей компании, которая предоставляет эскортные услуги по всему городу. 
+                    Именно он отвечает за качество и безопасность наших клиентов.
                 </p>
             </div>
         </div>
 
-        <!-- Вторая фотография (центр) -->
-        <div class="contact-item center">
+        <!-- Первая фотография -->
+        <div class="contact-item">
+            <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+            <div class="contact-info">
+                <h2>Марго Сладка</h2>
+                <p class="description">
+                    Профессиональный эскорт с 10-летним опытом. Всегда готова сделать ваш вечер незабываемым.
+                </p>
+                <ul class="price-list">
+                    <li>Футджоб - 3000 филякоинов</li>
+                    <li>Выезд на дом - 4500 филякоинов</li>
+                    <li>Все включено - 9000 филякоинов</li>
+                    <li>С окончанием - 1500 филякоинов</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Вторая фотография -->
+        <div class="contact-item">
             <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
             <div class="contact-info">
                 <h2>Потаскуха Ржавого</h2>
@@ -41,20 +47,14 @@
             </div>
         </div>
 
-        <!-- Первая фотография (справа) -->
-        <div class="contact-item right">
-            <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+        <!-- Третья фотография -->
+        <div class="contact-item">
+            <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
             <div class="contact-info">
-                <h2>Марго Сладка</h2>
+                <h2>Игорёк Геркулес</h2>
                 <p class="description">
-                    Профессиональный эскорт с 10-летним опытом. Всегда готова сделать ваш вечер незабываемым.
+                    Наш главный сутенер. Организует встречи на высшем уровне и обеспечивает безопасность.
                 </p>
-                <ul class="price-list">
-                    <li>Футджоб - 3000 филякоинов</li>
-                    <li>Выезд на дом - 4500 филякоинов</li>
-                    <li>Все включено - 9000 филякоинов</li>
-                    <li>С окончанием - 1500 филякоинов</li>
-                </ul>
             </div>
         </div>
     </div>
