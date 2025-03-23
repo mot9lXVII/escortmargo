@@ -22,5 +22,9 @@ def contacts():
 def developers():
     return render_template('developers.html')
 
+@app.route('/settings')
+def settings():
+    return render_template('settings.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
