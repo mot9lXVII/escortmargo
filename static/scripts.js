@@ -1,46 +1,55 @@
-// Получаем элементы
-const menuToggle = document.getElementById('menu-toggle');
-const closeMenu = document.getElementById('close-menu');
-const sidebar = document.getElementById('sidebar');
+// Переключение темы
+const themeToggle = document.getElementById("theme-toggle");
 
-// Открываем меню
-menuToggle.addEventListener('click', () => {
-    sidebar.classList.add('active');
-});
-
-// Закрываем меню
-closeMenu.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-});
-
-// Закрываем меню при клике вне его
-document.addEventListener('click', (event) => {
-    if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-        sidebar.classList.remove('active');
+// Обработчик переключателя темы
+themeToggle.addEventListener("change", function () {
+    if (this.checked) {
+        document.body.classList.add("dark-theme");
+        document.body.classList.remove("light-theme");
+    } else {
+        document.body.classList.add("light-theme");
+        document.body.classList.remove("dark-theme");
     }
 });
 
-// Обработка изменения темы
-const themeSwitcher = document.querySelector('.theme-switch');
-const body = document.body;
-
-// Проверяем сохраненную тему в localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    body.classList.add('dark-theme');
-    document.getElementById('dark-theme').checked = true;
+// Начальная установка темы в зависимости от предпочтений пользователя
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-theme");
+    document.body.classList.remove("light-theme");
+    themeToggle.checked = true;
 } else {
-    body.classList.remove('dark-theme');
-    document.getElementById('light-theme').checked = true;
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+    themeToggle.checked = false;
 }
 
-// Обработка изменения темы
-themeSwitcher.addEventListener('change', (event) => {
-    if (event.target.value === 'dark') {
-        body.classList.add('dark-theme');
-        localStorage.setItem('theme', 'dark'); // Сохраняем тему в localStorage
+// Сохранение предпочтений темы в localStorage
+themeToggle.addEventListener("change", function () {
+    if (this.checked) {
+        localStorage.setItem("theme", "dark");
     } else {
-        body.classList.remove('dark-theme');
-        localStorage.setItem('theme', 'light'); // Сохраняем тему в localStorage
+        localStorage.setItem("theme", "light");
+    }
+});
+
+// Открытие и закрытие бокового меню
+const menuToggle = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("sidebar");
+const closeMenu = document.getElementById("close-menu");
+
+// Открыть меню
+menuToggle.addEventListener("click", function () {
+    sidebar.classList.add("active");
+});
+
+// Закрыть меню
+closeMenu.addEventListener("click", function () {
+    sidebar.classList.remove("active");
+});
+
+// Закрытие меню при клике вне меню
+document.addEventListener("click", function (event) {
+    if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+        sidebar.classList.remove("active");
     }
 });
