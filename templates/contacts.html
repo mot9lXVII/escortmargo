@@ -30,14 +30,52 @@
             <li><a href="/contacts" class="active">Контакты</a></li>
             <li><a href="/developers">Разработчики</a></li>
             <li><a href="/settings">Настройки</a></li>
-            <li><a href="/reviews">Отзывы</a></li> <!-- Добавлена вкладка Отзывы -->
         </ul>
     </nav>
 
     <!-- Основной контент -->
     <div class="content">
-        <!-- Центрированный блок с фотографией и информацией о владельце компании -->
-        <div class="centered-item">
+        <!-- Первая фотография -->
+        <div class="centered-photo">
+            <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+            <div class="contact-info">
+                <h2>Марго Сладка</h2>
+                <ul class="price-list">
+                    <li>Футджоб - 3000 филякоинов</li>
+                    <li>Выезд на дом - 4500 филякоинов</li>
+                    <li>Все включено - 9000 филякоинов</li>
+                    <li>С окончанием - 1500 филякоинов</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Вторая фотография -->
+        <div class="centered-photo">
+            <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
+            <div class="contact-info">
+                <h2>Потаскуха Ржавого</h2>
+                <ul class="price-list">
+                    <li>Футджоб - 15000 филякоинов</li>
+                    <li>Выезд на дом - 7000 филякоинов</li>
+                    <li>Все включено - 12000 филякоинов</li>
+                    <li>С окончанием - 3000 филякоинов</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Третья фотография -->
+        <div class="centered-photo">
+            <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
+            <div class="contact-info">
+                <h2>Игорёк Геркулес</h2>
+                <p class="subtitle">
+                    Наш главный и самый лучший сутенер города!
+                </p>
+            </div>
+        </div>
+
+        <!-- Новая фотография (photo4.jpg) -->
+        <div class="centered-photo">
             <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Владелец компании" class="contact-photo">
             <div class="contact-info">
                 <h2>Владелец компании</h2>
@@ -48,39 +86,8 @@
             </div>
         </div>
 
-        <!-- Фотографии с описаниями -->
-        <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
-        <div class="contact-info">
-            <h2>Марго Сладка</h2>
-            <ul class="price-list">
-                <li>Футджоб - 3000 филякоинов</li>
-                <li>Выезд на дом - 4500 филякоинов</li>
-                <li>Все включено - 9000 филякоинов</li>
-                <li>С окончанием - 1500 филякоинов</li>
-            </ul>
-        </div>
-
-        <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
-        <div class="contact-info">
-            <h2>Потаскуха Ржавого</h2>
-            <ul class="price-list">
-                <li>Футджоб - 15000 филякоинов</li>
-                <li>Выезд на дом - 7000 филякоинов</li>
-                <li>Все включено - 12000 филякоинов</li>
-                <li>С окончанием - 3000 филякоинов</li>
-            </ul>
-        </div>
-
-        <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
-        <div class="contact-info">
-            <h2>Игорёк Геркулес</h2>
-            <p class="subtitle">
-                Наш главный и самый лучший сутенер города!
-            </p>
-        </div>
-
-        <!-- Центрированный блок с фотографией и информацией о главной шалаве -->
-        <div class="centered-item">
+        <!-- Новая фотография (photo5.jpg) -->
+        <div class="centered-photo">
             <img src="{{ url_for('static', filename='images/photo5.jpg') }}" alt="Главная шалава" class="contact-photo">
             <div class="contact-info">
                 <h2>Главная шалава</h2>
