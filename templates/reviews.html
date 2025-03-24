@@ -30,26 +30,24 @@
             <li><a href="/contacts">Контакты</a></li>
             <li><a href="/developers">Разработчики</a></li>
             <li><a href="/settings">Настройки</a></li>
-            <li><a href="/reviews" class="active">Отзывы</a></li>
+            <li><a href="/reviews" class="active">Отзывы</a></li> <!-- Вкладка Отзывы -->
         </ul>
     </nav>
 
     <!-- Основной контент -->
     <div class="content">
         <h1>Отзывы</h1>
-        
-        <!-- Блок с фотографией и отзывом -->
+
+        <!-- Отзыв с фотографией и оценкой -->
         <div class="review-container">
-            <!-- Фотография -->
-            <img src="{{ url_for('static', filename='images/photo10.jpg') }}" alt="Отзывчик" class="review-photo">
+            <!-- Фотография отзывающегося -->
+            <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Фотография Марго Сладка" class="review-photo">
 
-            <!-- Блок с отзывом -->
+            <!-- Блок с текстом отзыва -->
             <div class="review-box">
-                <p class="review-text">
-                    Она заглатывала мой член, как я заглатываю этот банан!
-                </p>
+                <p class="review-text">Она заглатывала мой член, как я заглатываю этот банан!</p>
 
-                <!-- Оценка -->
+                <!-- Оценка (звезды) -->
                 <div class="rating">
                     <span class="star">★</span>
                     <span class="star">★</span>
@@ -57,6 +55,12 @@
                     <span class="star">★</span>
                     <span class="star">★</span>
                 </div>
+            </div>
+
+            <!-- Информация о авторе отзыва (Марго Сладка) -->
+            <div class="review-author-info">
+                <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Фото Марго Сладка" class="review-author-photo">
+                <span class="review-author-name">Марго Сладка</span>
             </div>
         </div>
     </div>
