@@ -30,13 +30,14 @@
             <li><a href="/contacts" class="active">Контакты</a></li>
             <li><a href="/developers">Разработчики</a></li>
             <li><a href="/settings">Настройки</a></li>
+            <li><a href="/reviews">Отзывы</a></li> <!-- Добавлена кнопка Отзывы -->
         </ul>
     </nav>
 
     <!-- Основной контент -->
     <div class="content">
-        <!-- Первая фотография -->
-        <div class="centered-photo">
+        <div class="centered">
+            <!-- Первая фотография -->
             <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
             <div class="contact-info">
                 <h2>Марго Сладка</h2>
@@ -47,10 +48,8 @@
                     <li>С окончанием - 1500 филякоинов</li>
                 </ul>
             </div>
-        </div>
 
-        <!-- Вторая фотография -->
-        <div class="centered-photo">
+            <!-- Вторая фотография -->
             <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
             <div class="contact-info">
                 <h2>Потаскуха Ржавого</h2>
@@ -61,10 +60,8 @@
                     <li>С окончанием - 3000 филякоинов</li>
                 </ul>
             </div>
-        </div>
 
-        <!-- Третья фотография -->
-        <div class="centered-photo">
+            <!-- Третья фотография -->
             <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
             <div class="contact-info">
                 <h2>Игорёк Геркулес</h2>
@@ -72,10 +69,8 @@
                     Наш главный и самый лучший сутенер города!
                 </p>
             </div>
-        </div>
 
-        <!-- Новая фотография (photo4.jpg) -->
-        <div class="centered-photo">
+            <!-- Новая фотография (photo4.jpg) -->
             <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Владелец компании" class="contact-photo">
             <div class="contact-info">
                 <h2>Владелец компании</h2>
@@ -84,10 +79,8 @@
                     Отвечает за стратегическое развитие и качество услуг.
                 </p>
             </div>
-        </div>
 
-        <!-- Новая фотография (photo5.jpg) -->
-        <div class="centered-photo">
+            <!-- Новая фотография (photo5.jpg) -->
             <img src="{{ url_for('static', filename='images/photo5.jpg') }}" alt="Главная шалава" class="contact-photo">
             <div class="contact-info">
                 <h2>Главная шалава</h2>
