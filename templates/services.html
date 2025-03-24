@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-theme">
     <!-- Кнопка для открытия меню -->
     <div class="menu-toggle" id="menu-toggle">
         <div class="bar"></div>
@@ -17,12 +17,10 @@
 
     <!-- Боковое меню -->
     <nav class="sidebar" id="sidebar">
-        <!-- Кнопка для закрытия меню -->
         <div class="close-menu" id="close-menu">
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-
         <ul>
             <li><a href="/">Главная</a></li>
             <li><a href="/about">О нас</a></li>
@@ -30,25 +28,22 @@
             <li><a href="/contacts">Контакты</a></li>
             <li><a href="/developers">Разработчики</a></li>
             <li><a href="/settings">Настройки</a></li>
+            <li><a href="/reviews">Отзывы</a></li>
         </ul>
     </nav>
 
     <!-- Основной контент -->
     <div class="content">
         <h1>Наши услуги</h1>
-        <p class="subtitle">
-            Мы предоставляем широкий спектр услуг для вашего комфорта и безопасности. 
-            Вот что мы можем предложить:
-        </p>
-        <ul class="services-list">
-            <li>Экстренный выезд по вашему сигналу.</li>
-            <li>Транспортировка в наш отель.</li>
-            <li>Комфортное размещение и полная конфиденциальность.</li>
-            <li>Круглосуточная поддержка.</li>
-        </ul>
+        <p>Мы предоставляем широкий спектр услуг. Ознакомьтесь с нашим списком услуг.</p>
     </div>
 
-    <!-- Подключение JavaScript -->
+    <!-- Переключатель темы -->
+    <div class="theme-switcher">
+        <label for="theme-toggle">Темная/светлая тема</label>
+        <input type="checkbox" id="theme-toggle">
+    </div>
+
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
