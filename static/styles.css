@@ -1,13 +1,20 @@
 /* Общие стили для страницы */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Центрирование контента */
 .centered {
+    text-align: center;
+}
+
+/* Центрирование заголовков */
+h1, h2, p {
     text-align: center;
 }
 
@@ -32,7 +39,6 @@ body {
 
 .contact-info h2 {
     font-size: 24px;
-    color: #333;
     margin-bottom: 10px;
 }
 
@@ -48,7 +54,6 @@ body {
 
 .price-list li {
     font-size: 16px;
-    color: #777;
     margin-bottom: 5px;
 }
 
@@ -143,4 +148,13 @@ body.dark-theme {
     right: 20px;
     cursor: pointer;
     font-size: 20px;
+}
+
+/* Стиль для страницы Разработчики */
+.developer-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Округление фотографий */
+    object-fit: cover;
+    margin-right: 20px;
 }
