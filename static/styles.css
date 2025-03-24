@@ -6,8 +6,8 @@ body {
     padding: 0;
 }
 
-/* Стиль для центральных элементов (фотография и описание) */
-.centered-item {
+/* Центрирование фотографий */
+.centered-photo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Округление фотографий и их выравнивание */
+/* Округление фотографий */
 .contact-photo {
     width: 150px;
     height: 150px;
