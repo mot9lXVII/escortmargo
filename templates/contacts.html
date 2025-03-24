@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-theme">
     <!-- Кнопка для открытия меню -->
     <div class="menu-toggle" id="menu-toggle">
         <div class="bar"></div>
@@ -17,12 +17,10 @@
 
     <!-- Боковое меню -->
     <nav class="sidebar" id="sidebar">
-        <!-- Кнопка для закрытия меню -->
         <div class="close-menu" id="close-menu">
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-
         <ul>
             <li><a href="/">Главная</a></li>
             <li><a href="/about">О нас</a></li>
@@ -35,20 +33,10 @@
     </nav>
 
     <!-- Основной контент -->
-    <div class="content centered">
+    <div class="content">
         <h1>Контакты</h1>
-
-        <!-- Владелец Компании (центрированная фотография и описание) -->
-        <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Владелец компании" class="contact-photo">
-        <div class="contact-info">
-            <h2>Владелец компании</h2>
-            <p>
-                Основатель и владелец компании <strong>3ск0рт услуги Ив4ц3Buч</strong>. Отвечает за стратегическое развитие и качество услуг.
-            </p>
-        </div>
-
-        <!-- Первая фотография -->
-        <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+        <p>Свяжитесь с нами для получения дополнительной информации.</p>
+        <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Фотография" class="contact-photo">
         <div class="contact-info">
             <h2>Марго Сладка</h2>
             <ul class="price-list">
@@ -58,39 +46,14 @@
                 <li>С окончанием - 1500 филякоинов</li>
             </ul>
         </div>
-
-        <!-- Вторая фотография -->
-        <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
-        <div class="contact-info">
-            <h2>Потаскуха Ржавого</h2>
-            <ul class="price-list">
-                <li>Футджоб - 15000 филякоинов</li>
-                <li>Выезд на дом - 7000 филякоинов</li>
-                <li>Все включено - 12000 филякоинов</li>
-                <li>С окончанием - 3000 филякоинов</li>
-            </ul>
-        </div>
-
-        <!-- Третья фотография -->
-        <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
-        <div class="contact-info">
-            <h2>Игорёк Геркулес</h2>
-            <p class="subtitle">
-                Наш главный и самый лучший сутенер города!
-            </p>
-        </div>
-
-        <!-- Главная шалава (центрированная фотография и описание) -->
-        <img src="{{ url_for('static', filename='images/photo5.jpg') }}" alt="Главная шалава" class="contact-photo">
-        <div class="contact-info">
-            <h2>Главная шалава</h2>
-            <p class="subtitle">
-                Главная шалава данной компании. Предоставляются все заказанные вами услуги. Цены обговариваются с этой особью.
-            </p>
-        </div>
     </div>
 
-    <!-- Подключение JavaScript -->
+    <!-- Переключатель темы -->
+    <div class="theme-switcher">
+        <label for="theme-toggle">Темная/светлая тема</label>
+        <input type="checkbox" id="theme-toggle">
+    </div>
+
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
