@@ -30,13 +30,16 @@
             <li><a href="/contacts" class="active">Контакты</a></li>
             <li><a href="/developers">Разработчики</a></li>
             <li><a href="/settings">Настройки</a></li>
-            <li><a href="/reviews">Отзывы</a></li> <!-- Добавленная вкладка -->
+            <li><a href="/reviews">Отзывы</a></li>
         </ul>
     </nav>
 
     <!-- Основной контент -->
     <div class="content">
+        <!-- Первая фотография -->
         <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Марго Сладка" class="contact-photo">
+        
+        <!-- Надпись под первой фотографией -->
         <div class="contact-info">
             <h2>Марго Сладка</h2>
             <ul class="price-list">
@@ -47,7 +50,10 @@
             </ul>
         </div>
 
+        <!-- Вторая фотография -->
         <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Потаскуха Ржавого" class="contact-photo">
+        
+        <!-- Надпись под второй фотографией -->
         <div class="contact-info">
             <h2>Потаскуха Ржавого</h2>
             <ul class="price-list">
@@ -58,29 +64,14 @@
             </ul>
         </div>
 
+        <!-- Третья фотография -->
         <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Игорёк Геркулес" class="contact-photo">
+        
+        <!-- Надпись под третьей фотографией -->
         <div class="contact-info">
             <h2>Игорёк Геркулес</h2>
-            <p class="subtitle">Наш главный и самый лучший сутенер города!</p>
-        </div>
-
-        <!-- Новая фотография (photo4.jpg) -->
-        <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Владелец компании" class="contact-photo">
-        <div class="contact-info">
-            <h2>Владелец компании</h2>
             <p class="subtitle">
-                Основатель и владелец компании <strong>3ск0рт услуги Ив4ц3Buч</strong>. 
-                Отвечает за стратегическое развитие и качество услуг.
-            </p>
-        </div>
-
-        <!-- Новая фотография (photo5.jpg) -->
-        <img src="{{ url_for('static', filename='images/photo5.jpg') }}" alt="Главная шалава" class="contact-photo">
-        <div class="contact-info">
-            <h2>Главная шалава</h2>
-            <p class="subtitle">
-                Главная шалава данной компании. Предоставляются все заказанные вами услуги. 
-                Цены обговариваются с этой особью.
+                Наш главный и самый лучший сутенер города!
             </p>
         </div>
     </div>
