@@ -1,257 +1,92 @@
-/* Общие стили */
+/* Общие стили для страницы */
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f9f9f9;
-    display: flex;
-    min-height: 100vh;
-    color: #333;
-    overflow-x: hidden;
+    background-color: #f4f4f4;
 }
 
-/* Кнопка для открытия меню */
-.menu-toggle {
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Стили для бокового меню */
+.sidebar {
     position: fixed;
-    top: 20px;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 30px;
+    display: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+    color: white;
+    display: block;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #575757;
+}
+
+.menu-toggle {
+    display: block;
+    position: absolute;
+    top: 30px;
     left: 20px;
     cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 }
 
 .menu-toggle .bar {
-    width: 25px;
+    width: 30px;
     height: 3px;
-    background-color: #333;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin: 6px 0;
+    background-color: white;
 }
 
-/* Боковое меню */
-.sidebar {
-    width: 200px;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    height: 100vh;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: -250px;
-    transition: left 0.3s ease;
-    z-index: 999;
-}
-
-.sidebar.active {
-    left: 0;
-}
-
-/* Кнопка для закрытия меню */
 .close-menu {
     position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .close-menu .bar {
-    width: 25px;
+    width: 30px;
     height: 3px;
+    margin: 6px 0;
     background-color: white;
-    position: absolute;
-}
-
-.close-menu .bar:first-child {
-    transform: rotate(45deg);
-}
-
-.close-menu .bar:last-child {
-    transform: rotate(-45deg);
-}
-
-/* Список меню */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 60px;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    color: #f39c12;
 }
 
 /* Основной контент */
 .content {
-    flex: 1;
-    padding: 40px;
-    margin-left: 0;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 80px;
-}
-
-/* Стили для фотографии */
-.contact-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-}
-
-.contact-photo:hover {
-    transform: scale(1.05);
-}
-
-/* Стили для текста под фото */
-.contact-info {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.contact-info h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+    margin-left: 270px;
+    padding: 20px;
 }
 
 .subtitle {
     font-size: 18px;
     color: #555;
-}
-
-.price-list {
-    list-style-type: none;
-    padding: 0;
-    font-size: 18px;
-    color: #555;
-}
-
-.price-list li {
-    margin: 10px 0;
-}
-
-.price-list li strong {
-    color: #f39c12;
-    font-weight: 600;
-}
-
-/* Стили для страницы разработчиков */
-.developers-list {
-    list-style-type: none;
-    padding: 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.developers-list li {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.developer-photo {
-    width: 50px; /* Размер фотографии */
-    height: 50px;
-    border-radius: 50%; /* Круглая форма */
-    object-fit: cover; /* Сохраняет пропорции изображения */
-    margin-right: 10px; /* Отступ справа */
-}
-
-/* Стили для выбора темы */
-.theme-selector {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.theme-selector span {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-.theme-switch {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.theme-switch input[type="radio"] {
-    display: none;
-}
-
-.theme-switch label {
-    padding: 8px 16px;
-    border-radius: 20px;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.theme-switch label:hover {
-    background-color: #ddd;
-}
-
-.theme-switch input[type="radio"]:checked + label {
-    background-color: #333;
-    color: white;
-}
-
-/* Темная тема */
-.dark-theme {
-    background-color: #0d1117; /* Цвет фона как у GitHub */
-    color: white;
-}
-
-.dark-theme .sidebar {
-    background-color: #161b22; /* Темный цвет для бокового меню */
-}
-
-.dark-theme .sidebar ul li a {
-    color: white;
-}
-
-.dark-theme .sidebar ul li a:hover {
-    color: #f39c12;
-}
-
-.dark-theme .content {
-    color: white;
-}
-
-.dark-theme .theme-switch label {
-    background-color: #333;
-    color: white;
-}
-
-.dark-theme .theme-switch label:hover {
-    background-color: #444;
-}
-
-.dark-theme .theme-switch input[type="radio"]:checked + label {
-    background-color: #555;
 }
 
 /* Стили для отзыва */
@@ -296,43 +131,29 @@ body {
     margin-right: 5px;
 }
 
+/* Добавляем фотографию Марго Сладка */
+.review-author-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.review-author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.review-author-name {
+    font-weight: bold;
+    margin-left: 10px;
+    color: #333;
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
-    .contacts-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-item {
-        width: 90%;
-    }
-
-    .contact-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .contact-info h2 {
-        font-size: 18px;
-    }
-
-    .description {
-        font-size: 13px;
-    }
-
-    .price-list {
-        font-size: 14px;
-    }
-
-    .developers-list {
-        font-size: 16px;
-    }
-
-    .developer-photo {
-        width: 40px;
-        height: 40px;
-    }
-
     .review-container {
         flex-direction: column;
         align-items: center;
@@ -346,5 +167,26 @@ body {
     .review-box {
         max-width: 90%;
         text-align: center;
+    }
+
+    .sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        color: white;
+        padding-top: 60px;
+    }
+
+    .sidebar ul li {
+        padding: 15px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
     }
 }
