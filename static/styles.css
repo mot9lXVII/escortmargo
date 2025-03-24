@@ -1,27 +1,27 @@
 /* Основной стиль страницы */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Шрифт Poppins для приятного чтения */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
 }
 
 /* Стили для бокового меню */
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -250px; /* Меню изначально скрыто */
     height: 100%;
     width: 250px;
     background-color: #2c3e50;
     padding-top: 20px;
-    transition: transform 0.3s ease;
-    transform: translateX(-250px);
+    transition: left 0.3s ease;
 }
 
 .sidebar.open {
-    transform: translateX(0);
+    left: 0; /* Когда меню открыто, оно сдвигается влево */
 }
 
 .sidebar ul {
@@ -39,6 +39,7 @@ body {
     color: white;
     font-size: 18px;
     display: block;
+    padding: 10px 15px;
 }
 
 .sidebar ul li a.active {
@@ -75,32 +76,32 @@ body {
 
 /* Стили для контента */
 .content {
-    margin-left: 250px;
+    margin-left: 0; /* Убираем отступ слева */
     padding: 20px;
+    transition: margin-left 0.3s ease;
+    max-width: 1200px;
+    margin: 0 auto; /* Централизуем контент */
 }
 
-/* Стили для фотографий в контактах */
+/* Центрируем изображения в разделе контактов */
 .contact-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Закругление фото */
-    object-fit: cover; /* Сохранение пропорций */
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-    display: block; /* Централизуем фото */
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 50%; /* Закругляем фотографию */
+    object-fit: cover;
+    margin: 0 auto;
+    display: block; /* Центрируем фотографию */
 }
 
 /* Центрирование текста под фотографиями */
 .contact-info {
-    text-align: center; /* Центрируем текст */
+    text-align: center;
     margin-bottom: 40px;
 }
 
 .contact-info h2 {
     font-size: 24px;
-    font-family: 'Roboto', sans-serif; /* Используем более приятный шрифт */
+    font-family: 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 10px;
 }
@@ -108,7 +109,6 @@ body {
 .contact-info p, .contact-info ul {
     font-size: 18px;
     color: #555;
-    font-family: 'Open Sans', sans-serif; /* Шрифт для текста */
     margin-top: 10px;
 }
 
@@ -131,44 +131,44 @@ body {
 
 /* Стили для страницы отзывов */
 .reviews-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Закругление фотографии */
     object-fit: cover;
-    display: block;
-    margin: 0 auto;
+    display: inline-block; /* Фотография рядом с текстом */
+    margin-right: 20px;
 }
 
-/* Бокс с отзывом */
 .review-box {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    text-align: center;
+    text-align: left; /* Текст внутри бокса слева */
+    display: flex;
+    align-items: center;
 }
 
 .review-box p {
     font-size: 18px;
     color: #333;
     font-family: 'Open Sans', sans-serif;
+    flex: 1; /* Текст занимает всю оставшуюся ширину */
 }
 
-/* Стили для звездочек (оценка) */
 .star-rating {
     font-size: 20px;
-    color: #f39c12;
+    color: #f39c12; /* Жёлтые звезды */
     margin-top: 10px;
 }
 
-/* Стиль для кнопки активации меню */
+/* Стили для активной кнопки в боковом меню */
 .sidebar.open + .content {
-    margin-left: 0;
+    margin-left: 250px;
     transition: margin-left 0.3s ease;
 }
 
-/* Стиль для открытого меню */
 .sidebar.open ul li a.active {
     background-color: #16a085;
 }
