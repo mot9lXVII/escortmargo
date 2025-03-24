@@ -26,9 +26,5 @@ def developers():
 def settings():
     return render_template('settings.html')
 
-@app.route('/reviews')  # Новый маршрут для страницы отзывов
-def reviews():
-    return render_template('reviews.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
