@@ -6,6 +6,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    transition: all 0.3s ease-in-out; /* Плавные переходы */
 }
 
 /* Стили для бокового меню */
@@ -40,6 +41,7 @@ body {
     font-size: 18px;
     display: block;
     padding: 10px 15px;
+    transition: background-color 0.3s ease; /* Плавный эффект при наведении */
 }
 
 .sidebar ul li a.active {
@@ -131,12 +133,18 @@ body {
 
 /* Стили для страницы отзывов */
 .reviews-photo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%; /* Закругление фотографии */
     object-fit: cover;
     display: inline-block; /* Фотография рядом с текстом */
-    margin-right: 20px;
+    margin-left: 20px; /* Отступ слева для выравнивания */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для фотографии */
+    transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.reviews-photo:hover {
+    transform: scale(1.1); /* Увеличение фотографии при наведении */
 }
 
 .review-box {
@@ -148,6 +156,12 @@ body {
     text-align: left; /* Текст внутри бокса слева */
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* Размещение контента слева */
+    transition: box-shadow 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.review-box:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Увеличение тени при наведении */
 }
 
 .review-box p {
@@ -155,6 +169,7 @@ body {
     color: #333;
     font-family: 'Open Sans', sans-serif;
     flex: 1; /* Текст занимает всю оставшуюся ширину */
+    margin-right: 20px; /* Отступ справа для размещения звёздочек */
 }
 
 .star-rating {
