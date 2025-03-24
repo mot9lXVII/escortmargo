@@ -1,13 +1,13 @@
 /* Общие стили для страницы */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lora', serif; /* Измененный шрифт на более приятный */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
 h1, h2 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Измененный шрифт для заголовков */
 }
 
 a {
@@ -18,14 +18,18 @@ a {
 /* Стили для бокового меню */
 .sidebar {
     position: fixed;
-    left: 0;
+    left: -250px; /* Изначально меню скрыто за пределами экрана */
     top: 0;
     width: 250px;
     height: 100%;
     background-color: #333;
     color: white;
     padding-top: 30px;
-    display: none;
+    transition: left 0.3s ease; /* Плавное открытие меню */
+}
+
+.sidebar.open {
+    left: 0; /* Меню открыто */
 }
 
 .sidebar ul {
@@ -181,6 +185,10 @@ a {
         padding-top: 60px;
     }
 
+    .sidebar.open {
+        left: 0;
+    }
+
     .sidebar ul li {
         padding: 15px;
     }
@@ -189,4 +197,37 @@ a {
         margin-left: 0;
         padding: 20px;
     }
+}
+
+/* Для темной темы */
+body {
+    background-color: #212121;
+    color: #e0e0e0;
+}
+
+.sidebar {
+    background-color: #333;
+}
+
+.sidebar ul li a {
+    color: #e0e0e0;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #575757;
+}
+
+.review-box {
+    background-color: #424242;
+    color: #e0e0e0;
+}
+
+.review-author-name,
+.review-text {
+    color: #e0e0e0;
+}
+
+.rating {
+    color: #f39c12;
 }
