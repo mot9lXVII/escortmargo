@@ -30,6 +30,7 @@
             <li><a href="/contacts">Контакты</a></li>
             <li><a href="/developers">Разработчики</a></li>
             <li><a href="/settings" class="active">Настройки</a></li>
+            <li><a href="/reviews">Отзывы</a></li> <!-- Добавленная вкладка -->
         </ul>
     </nav>
 
@@ -37,34 +38,12 @@
     <div class="content">
         <h1>Настройки</h1>
         <p class="subtitle">
-            Здесь вы можете настроить параметры сайта.
+            Здесь вы можете настроить параметры, связанные с вашей учетной записью и предпочтениями.
+            Мы предлагаем гибкие настройки, которые помогут вам сделать работу с нашим сервисом максимально удобной.
         </p>
-
-        <!-- Выбор темы -->
-        <div class="theme-selector">
-    <span>Изменение темы:</span>
-    <div class="theme-switch">
-        <input type="radio" id="light-theme" name="theme" value="light">
-        <label for="light-theme">Светлая</label>
-        <input type="radio" id="dark-theme" name="theme" value="dark">
-        <label for="dark-theme">Темная</label>
     </div>
-</div>
-        
+
     <!-- Подключение JavaScript -->
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
-    <script>
-        // Обработка изменения темы
-        const themeSwitcher = document.querySelector('.theme-switch');
-        const body = document.body;
-
-        themeSwitcher.addEventListener('change', (event) => {
-            if (event.target.value === 'dark') {
-                body.classList.add('dark-theme');
-            } else {
-                body.classList.remove('dark-theme');
-            }
-        });
-    </script>
 </body>
 </html>
