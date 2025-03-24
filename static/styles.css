@@ -6,14 +6,9 @@ body {
     padding: 0;
 }
 
-/* Центрирование фотографий */
-.centered-photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Центрирование контента */
+.centered {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 /* Округление фотографий */
@@ -22,7 +17,7 @@ body {
     height: 150px;
     border-radius: 50%; /* Закругление фотографий */
     object-fit: cover;
-    margin-bottom: 15px;
+    margin: 20px auto;
     transition: transform 0.3s ease;
 }
 
@@ -128,4 +123,24 @@ body {
     margin: 5px;
     background-color: #fff;
     border-radius: 5px;
+}
+
+/* Переключение темы */
+body.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Переключатель темы */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
 }
