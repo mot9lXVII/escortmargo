@@ -30,31 +30,34 @@
             <li><a href="/contacts">Контакты</a></li>
             <li><a href="/developers">Разработчики</a></li>
             <li><a href="/settings">Настройки</a></li>
-            <li><a href="/reviews" class="active">Отзывы</a></li> <!-- Выделенная вкладка Отзывы -->
+            <li><a href="/reviews" class="active">Отзывы</a></li>
         </ul>
     </nav>
 
     <!-- Основной контент -->
     <div class="content">
         <h1>Отзывы</h1>
-        <p class="subtitle">
-            Здесь вы можете прочитать мнения наших клиентов.
-        </p>
         
-        <!-- Пример отзыва -->
-        <div class="review">
-            <h3>Алексей</h3>
-            <p>Очень доволен качеством услуг, все на высшем уровне!</p>
-        </div>
+        <!-- Блок с фотографией и отзывом -->
+        <div class="review-container">
+            <!-- Фотография -->
+            <img src="{{ url_for('static', filename='images/photo10.jpg') }}" alt="Отзывчик" class="review-photo">
 
-        <div class="review">
-            <h3>Марина</h3>
-            <p>Отличная команда, быстро реагируют на запросы, цены адекватные.</p>
-        </div>
+            <!-- Блок с отзывом -->
+            <div class="review-box">
+                <p class="review-text">
+                    Она заглатывала мой член, как я заглатываю этот банан!
+                </p>
 
-        <div class="review">
-            <h3>Владимир</h3>
-            <p>Все понравилось, обязательно обращусь снова.</p>
+                <!-- Оценка -->
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+            </div>
         </div>
     </div>
 
